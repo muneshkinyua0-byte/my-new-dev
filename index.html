@@ -4,6 +4,17 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Mr. Munene</title>
+<meta name="description" content="Mr. Munene — electronics engineer and analytical chemist working across signal transmission, chemical synthesis, and network security. Diploma in Electronics Engineering (Dedan Kimathi University) and BSc in Analytical Chemistry (University of Embu).">
+<meta name="keywords" content="Mr. Munene, Dicken Munene, electronics engineer Kenya, analytical chemist, network security consultant, ethical hacking Kenya, L-DOPA synthesis, Mucuna pruriens">
+<meta name="author" content="Mr. Munene">
+<link rel="canonical" href="https://muneshkinyua0-byte.github.io/my-new-dev/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Mr. Munene — Electronics Engineer & Analytical Chemist">
+<meta property="og:description" content="Portfolio of Mr. Munene: electronics engineering, analytical chemistry, network security, and ethical hacking work.">
+<meta property="og:url" content="https://muneshkinyua0-byte.github.io/my-new-dev/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Mr. Munene — Electronics Engineer & Analytical Chemist">
+<meta name="twitter:description" content="Portfolio of Mr. Munene: electronics engineering, analytical chemistry, network security, and ethical hacking work.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -95,6 +106,35 @@
     font-size: 10px;
   }
   .theme-toggle:hover{ border-color: var(--signal); }
+
+  /* ---- Eye-catching enhancements ---- */
+  @keyframes floatBlob{ 0%,100%{ transform: translate(0,0) scale(1); } 50%{ transform: translate(-20px,30px) scale(1.08); } }
+  @keyframes gradientShift{ 0%{ background-position: 0% 50%; } 50%{ background-position: 100% 50%; } 100%{ background-position: 0% 50%; } }
+  @keyframes fadeInUp{ from{ opacity:0; transform: translateY(22px); } to{ opacity:1; transform: translateY(0); } }
+  @keyframes pulseGlow{ 0%,100%{ box-shadow: 0 0 6px var(--signal); } 50%{ box-shadow: 0 0 16px var(--signal), 0 0 4px var(--net); } }
+
+  .blob{ position: fixed; border-radius: 50%; filter: blur(70px); opacity: 0.35; z-index: 0; pointer-events: none; animation: floatBlob 14s ease-in-out infinite; }
+  .blob-1{ width: 340px; height: 340px; background: var(--signal); top: -80px; right: -60px; }
+  .blob-2{ width: 300px; height: 300px; background: var(--net); bottom: 10%; left: -100px; animation-delay: -6s; }
+  .blob-3{ width: 220px; height: 220px; background: var(--chem); top: 40%; right: 15%; animation-delay: -10s; opacity: 0.22; }
+
+  .gradient-text{
+    background: linear-gradient(100deg, var(--signal), var(--net) 45%, var(--chem) 80%, var(--signal));
+    background-size: 300% auto;
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+    animation: gradientShift 8s ease infinite;
+  }
+  .kicker .dot{ animation: pulseGlow 2.2s ease-in-out infinite; }
+
+  .reveal{ opacity: 0; transform: translateY(22px); transition: opacity 0.7s ease, transform 0.7s ease; }
+  .reveal.visible{ opacity: 1; transform: translateY(0); animation: fadeInUp 0.7s ease; }
+
+  .project{ transition: transform 0.35s ease; }
+  .project:hover{ transform: translateX(6px); }
+  .skill-row{ transition: background 0.3s ease; }
+  .skill-row:hover{ background: var(--panel-2); }
+  .pill{ transition: transform 0.25s ease, border-color 0.25s ease; }
+  .pill:hover{ transform: translateY(-2px); border-color: var(--signal); }
 
   .avatar-nav-img{
     width: 32px; height: 32px; border-radius: 50%;
@@ -268,6 +308,10 @@
 </head>
 <body>
 
+<div class="blob blob-1"></div>
+<div class="blob blob-2"></div>
+<div class="blob blob-3"></div>
+
 <nav class="top">
   <div class="wrap">
     <div class="brand-row">
@@ -277,7 +321,9 @@
     <div class="nav-links">
       <a href="#about">About</a>
       <a href="#projects">Projects</a>
-      <a href="#engagements">Engagements</a>
+      <a href="#field">Field Work</a>
+      <a href="#writing">Writing</a>
+      <a href="#teaching">Teaching</a>
       <a href="#skills">Skills</a>
       <a href="#contact">Contact</a>
     </div>
@@ -294,9 +340,9 @@
     <div class="hero-grid">
       <div>
         <div class="kicker"><span class="dot"></span>ENGINEERING · CHEMISTRY · SECURITY</div>
-        <h1 class="name">Mr. Munene</h1>
+        <h1 class="name">Mr. <span class="gradient-text">Munene</span></h1>
         <p class="role-line">
-          <strong>Electronics engineer and analytical chemist</strong> working across signal systems, molecular synthesis, and network security — with a builder's habit of taking things apart to see how they carry information, energy, or risk.
+          <strong>Electronics engineer and professional chemical analyst</strong>, with a working practice that spans analytical chemistry, signal systems, and network security. He brings a rigorous, evidence-based approach to every discipline he works in — precise in the lab, exacting in the field.
         </p>
         <div class="hero-stats">
           <div><div class="stat-num">6+</div><div class="stat-label">YEARS IN TRAINING &amp; PRACTICE</div></div>
@@ -320,10 +366,13 @@
     </div>
   </header>
 
-  <section id="about">
+  <section id="about" class="reveal">
     <div class="section-head"><span class="section-num">01</span><h2>About</h2></div>
     <p class="lead">
-      Mr. Munene holds a <strong>Diploma in Electronics Engineering</strong> from Dedan Kimathi University of Technology and a <strong>BSc in Analytical Chemistry</strong> from the University of Embu. That combination shows up in how he works: comfortable reading a circuit schematic and a reaction mechanism in the same afternoon.
+      Mr. Munene holds a <strong>Diploma in Electronics Engineering</strong> from Dedan Kimathi University of Technology and a <strong>BSc in Analytical Chemistry</strong> from the University of Embu. The analytical chemistry degree in particular built a broad, transferable skill set — sample preparation, instrumental analysis, method validation, and rigorous data interpretation — the same core competencies that underpin professional chemical analysis work in industrial, environmental, and quality-control settings today.
+    </p>
+    <p class="body-text" style="margin-top:18px;">
+      That breadth is what positions him as a capable chemical analyst available for testing, quality assurance, and analytical consulting work — not just someone with a chemistry background, but someone trained specifically in the methods labs and industry rely on to produce trustworthy results.
     </p>
     <p class="body-text" style="margin-top:22px;">
       His academic path began on the electronics side — coils, carriers, and the physics of getting a signal from one point to another without losing it to noise. Chemistry came next, and rather than treating the two as separate chapters, he carried the electronics engineer's instinct for systems into the lab: a reaction, like a circuit, is a set of inputs, transformations, and losses you're trying to account for.
@@ -337,7 +386,7 @@
     </blockquote>
   </section>
 
-  <section id="education">
+  <section id="education" class="reveal">
     <div class="section-head"><span class="section-num">02</span><h2>Education</h2></div>
     <div class="timeline">
       <div class="t-item">
@@ -353,7 +402,7 @@
     </div>
   </section>
 
-  <section id="projects">
+  <section id="projects" class="reveal">
     <div class="section-head"><span class="section-num">03</span><h2>Selected Projects</h2></div>
 
     <div class="project">
@@ -439,11 +488,89 @@
     </div>
   </section>
 
-  <section id="engagements">
-    <div class="section-head"><span class="section-num">04</span><h2>Engagements</h2></div>
+  <section id="field" class="reveal">
+    <div class="section-head"><span class="section-num">04</span><h2>Field Experience</h2></div>
     <p class="lead" style="margin-bottom: 30px;">
-      Alongside his research background, Mr. Munene has taken on independent and contract work spanning IT infrastructure, network security, and web development for a range of clients.
+      Outside formal projects, Mr. Munene's daily routine has put him hands-on with <strong>three-phase electrical systems</strong> — the kind of practical, load-bearing work that classroom study alone doesn't teach.
     </p>
+    <div class="project" style="border-top:none; padding-top:0;">
+      <div class="proj-head">
+        <span class="proj-tag tag-net">THREE-PHASE SYSTEMS</span>
+      </div>
+      <div class="proj-body">
+        <h3>Three-phase motors &amp; industrial electrical work</h3>
+        <p>
+          Regular hands-on work with three-phase motors and associated switchgear — wiring, fault diagnosis, and routine maintenance — gave him a working grasp of three-phase power that pure theory rarely provides: how the phases balance load, how starting current behaves under real conditions, and what actually goes wrong in the field versus on paper.
+        </p>
+        <p>
+          That daily exposure became the practical counterpart to his electronics training, feeding directly into the writing he does for others learning the trade.
+        </p>
+        <div class="proj-meta">
+          <div><div class="k">SYSTEMS</div><div class="v">Three-phase motors &amp; switchgear</div></div>
+          <div><div class="k">SKILLS BUILT</div><div class="v">Wiring, fault diagnosis, maintenance</div></div>
+          <div><div class="k">CONTEXT</div><div class="v">Daily, hands-on industrial routine</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="writing" class="reveal">
+    <div class="section-head"><span class="section-num">05</span><h2>Writing &amp; Mentorship</h2></div>
+    <p class="lead" style="margin-bottom: 20px;">
+      That field experience, paired with his formal training, has fed into a body of <strong>unpublished technical writing</strong> aimed at engineers earlier in their careers.
+    </p>
+    <div class="note">
+      <p><strong>Guides for upcoming and aspiring engineers.</strong> Drawing on his own path through electronics, three-phase systems, and network security, Mr. Munene writes explanatory notes and guides intended to help students and early-career engineers bridge the gap between textbook theory and how systems actually behave in practice.</p>
+      <p>These works remain unpublished — written more as a personal record and a resource to share informally than as a commercial project — but they reflect the same instinct that runs through his projects: take what's been learned the hard way and make it easier for the next person.</p>
+    </div>
+  </section>
+
+  <section id="teaching" class="reveal">
+    <div class="section-head"><span class="section-num">06</span><h2>Teaching</h2></div>
+    <p class="lead" style="margin-bottom: 20px;">
+      Since <strong>2019</strong>, Mr. Munene has taken on part-time work as an untrained teacher in a Kenyan secondary school, teaching <strong>Physics and Chemistry</strong> alongside his other work.
+    </p>
+    <div class="project" style="border-top:none; padding-top:0;">
+      <div class="proj-head">
+        <span class="proj-tag tag-chem">EDUCATION · SINCE 2019</span>
+      </div>
+      <div class="proj-body">
+        <h3>Physics and Chemistry, part-time — secondary school</h3>
+        <p>
+          Rather than treating this as separate from his technical work, Mr. Munene sees it as an extension of it: teaching the same subjects he practises daily, and bringing a practitioner's grounding into the classroom rather than curriculum knowledge alone.
+        </p>
+        <div class="proj-meta">
+          <div><div class="k">SUBJECTS</div><div class="v">Physics &amp; Chemistry</div></div>
+          <div><div class="k">SINCE</div><div class="v">2019</div></div>
+          <div><div class="k">ROLE</div><div class="v">Part-time, untrained teacher</div></div>
+        </div>
+      </div>
+    </div>
+    <blockquote class="pull">
+      "A trained teacher knows how to deliver a syllabus. Someone who has actually synthesised a compound, or traced a fault through a live circuit, can also show a student why the syllabus is true — what it looks like when the theory works, and what it looks like when it doesn't. Both matter. Physics and chemistry are practical sciences, and I think they're taught best by people who still get their hands into the practice, not only the pedagogy."
+      <cite>— Mr. Munene</cite>
+    </blockquote>
+  </section>
+
+  <section id="engagements" class="reveal">
+    <div class="section-head"><span class="section-num">07</span><h2>Engagements</h2></div>
+    <p class="lead" style="margin-bottom: 30px;">
+      Alongside his research background, Mr. Munene has taken on independent and contract work spanning chemical analysis, IT infrastructure, network security, and web development for a range of clients.
+    </p>
+    <div class="engagement">
+      <div class="eng-period">Available</div>
+      <div>
+        <div class="eng-title">Circuit &amp; electronics repair</div>
+        <div class="eng-desc">Diagnosis and repair of faulty circuits and electronic equipment — component-level troubleshooting for consumer and industrial devices, built on his electronics engineering training.</div>
+      </div>
+    </div>
+    <div class="engagement">
+      <div class="eng-period">Available</div>
+      <div>
+        <div class="eng-title">Chemical analysis &amp; testing consulting</div>
+        <div class="eng-desc">Sample analysis, method validation, and quality-control testing for labs and organisations needing rigorous, trained analytical work — grounded in his BSc in Analytical Chemistry.</div>
+      </div>
+    </div>
     <div class="engagement">
       <div class="eng-period">Ongoing</div>
       <div>
@@ -467,18 +594,26 @@
     </div>
   </section>
 
-  <section id="privacy">
-    <div class="section-head"><span class="section-num">05</span><h2>A note on visibility</h2></div>
+  <section id="privacy" class="reveal">
+    <div class="section-head"><span class="section-num">08</span><h2>A note on visibility</h2></div>
     <div class="note">
       <p><strong>Mr. Munene keeps a low public profile by choice.</strong> He moves between projects, cities, and clients rather than settling into one publicised routine, and prefers letting the work speak for itself over building a public persona around it.</p>
       <p>This page exists as a reference point — a record of his training and work — rather than an attempt to be widely visible. If you're looking to reach him, the contact details below are the reliable route.</p>
     </div>
   </section>
 
-  <section id="skills">
-    <div class="section-head"><span class="section-num">06</span><h2>Skills</h2></div>
-    <p class="lead" style="margin-bottom: 28px;">Alongside his engineering and chemistry background, Mr. Munene works across IT — from building and maintaining networks to writing code and testing systems for weaknesses.</p>
+  <section id="skills" class="reveal">
+    <div class="section-head"><span class="section-num">09</span><h2>Skills</h2></div>
+    <p class="lead" style="margin-bottom: 28px;">Alongside his engineering and chemistry background, Mr. Munene is a hands-on circuit and electronics repair specialist — the practical, diagnostic skillset that anchors his other technical work.</p>
     <div class="skills-panel">
+      <div class="skill-row">
+        <div class="skill-cat">Circuit &amp; Electronics Repair<span>fix</span></div>
+        <div class="skill-list">
+          <span class="pill highlight">Component-level circuit diagnostics</span>
+          <span class="pill highlight">Electronics repair — consumer &amp; industrial</span>
+          <span class="pill highlight">Fault-finding &amp; board-level troubleshooting</span>
+        </div>
+      </div>
       <div class="skill-row">
         <div class="skill-cat">Web Development<span>build</span></div>
         <div class="skill-list">
@@ -556,6 +691,19 @@
       applyTheme(next);
       try{ localStorage.setItem('munene-theme', next); }catch(e){}
     });
+  })();
+
+  (function(){
+    var els = document.querySelectorAll('.reveal');
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){
+          entry.target.classList.add('visible');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    els.forEach(function(el){ io.observe(el); });
   })();
 </script>
 
