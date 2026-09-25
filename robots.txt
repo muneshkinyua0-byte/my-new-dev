@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://muneshkinyua0-byte.github.io/my-new-dev/sitemap.xml
